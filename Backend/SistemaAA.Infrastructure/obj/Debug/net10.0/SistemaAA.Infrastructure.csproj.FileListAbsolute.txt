@@ -1,0 +1,16 @@
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\bin\Debug\net10.0\SistemaAA.Infrastructure.deps.json
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\bin\Debug\net10.0\SistemaAA.Infrastructure.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\bin\Debug\net10.0\SistemaAA.Infrastructure.pdb
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\bin\Debug\net10.0\SistemaAA.Domain.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\bin\Debug\net10.0\SistemaAA.Domain.pdb
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\SistemaAA.Infrastructure.csproj.AssemblyReference.cache
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\SistemaAA.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\SistemaAA.Infrastructure.AssemblyInfoInputs.cache
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\SistemaAA.Infrastructure.AssemblyInfo.cs
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\SistemaAA.Infrastructure.csproj.CoreCompileInputs.cache
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\SistemaAA.Infrastructure.sourcelink.json
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\SistemaA.3714B65D.Up2Date
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\SistemaAA.Infrastructure.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\refint\SistemaAA.Infrastructure.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\SistemaAA.Infrastructure.pdb
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Infrastructure\obj\Debug\net10.0\ref\SistemaAA.Infrastructure.dll

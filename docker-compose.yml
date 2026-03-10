@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  # O Banco de Dados PostgreSQL 16
+  db:
+    image: postgres:16-alpine
+    container_name: sistema_aa_db
+    environment:
+      POSTGRES_DB: sistema_aa
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Password123! # Mudar para produção
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+  # A Web API .NET 10
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    container_name: sistema_aa_api
+    depends_on:
+      - db
+    ports:
+      - "5000:8080"    # Acessível via http://localhost:5000
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      # String de conexão configurada para conectar ao container db na rede do compose
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=sistema_aa;Username=postgres;Password=Password123!
+    restart: unless-stopped
+
+  # O Frontend Angular 21
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    container_name: sistema_aa_web
+    ports:
+      - "4200:80"    # Acessível via http://localhost:4200 apontando para o Nginx
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
