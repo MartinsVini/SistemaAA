@@ -95,13 +95,20 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    // Fix: Scalar resolving relative paths based on URL trailing slash
+    app.MapOpenApi(); // Base: /openapi/{documentName}.json
+    app.MapOpenApi("/scalar/openapi/{documentName}.json"); // Relative without trailing slash
+    app.MapOpenApi("/scalar/v1/openapi/{documentName}.json"); // Relative with trailing slash
+
     app.MapScalarApiReference(options => {
         options.WithTitle("API do Sistema AA")
                .WithTheme(ScalarTheme.DeepSpace)
                .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient)
+               .WithBundleUrl("https://cdn.jsdelivr.net/npm/@scalar/api-reference")
                .WithOpenApiRoutePattern("/openapi/v1.json");
     });
+    
+    app.MapGet("/", () => Results.Redirect("/scalar/v1")).ExcludeFromDescription();
 }
 
 app.UseAuthentication();
