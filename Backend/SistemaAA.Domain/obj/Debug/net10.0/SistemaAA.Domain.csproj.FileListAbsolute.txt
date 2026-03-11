@@ -10,3 +10,4 @@ Z:\Programacao\SistemaAA\Backend\SistemaAA.Domain\obj\Debug\net10.0\SistemaAA.Do
 Z:\Programacao\SistemaAA\Backend\SistemaAA.Domain\obj\Debug\net10.0\refint\SistemaAA.Domain.dll
 Z:\Programacao\SistemaAA\Backend\SistemaAA.Domain\obj\Debug\net10.0\SistemaAA.Domain.pdb
 Z:\Programacao\SistemaAA\Backend\SistemaAA.Domain\obj\Debug\net10.0\ref\SistemaAA.Domain.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.Domain\obj\Debug\net10.0\SistemaAA.Domain.csproj.AssemblyReference.cache

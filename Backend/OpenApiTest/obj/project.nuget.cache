@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ed8BhXA7Q1s=",
+  "success": true,
+  "projectFilePath": "Z:\\Programacao\\SistemaAA\\Backend\\OpenApiTest\\OpenApiTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vinic\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.4\\microsoft.aspnetcore.openapi.10.0.4.nupkg.sha512",
+    "C:\\Users\\vinic\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\vinic\\.nuget\\packages\\scalar.aspnetcore\\2.13.5\\scalar.aspnetcore.2.13.5.nupkg.sha512"
+  ],
+  "logs": []
+}

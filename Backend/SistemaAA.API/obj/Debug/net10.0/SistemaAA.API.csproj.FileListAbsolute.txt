@@ -124,3 +124,13 @@ Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\ru\Microsoft.Co
 Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\Scalar.AspNetCore.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+Z:\Programacao\SistemaAA\Backend\SistemaAA.API\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
