@@ -213,6 +213,40 @@ namespace SistemaAA.Infrastructure.Migrations
                     b.ToTable("Clientes");
                 });
 
+            modelBuilder.Entity("SistemaAA.Domain.Entities.Documento", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CaminhoArquivo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("DataUpload")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("NomeOriginal")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("ProcessoId")
+                        .HasColumnType("uuid");
+
+                    b.Property<long>("TamanhoBytes")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("TipoConteudo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProcessoId");
+
+                    b.ToTable("Documentos");
+                });
+
             modelBuilder.Entity("SistemaAA.Domain.Entities.ParteContraria", b =>
                 {
                     b.Property<Guid>("Id")
@@ -477,6 +511,17 @@ namespace SistemaAA.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("SistemaAA.Domain.Entities.Documento", b =>
+                {
+                    b.HasOne("SistemaAA.Domain.Entities.Processo", "Processo")
+                        .WithMany("Documentos")
+                        .HasForeignKey("ProcessoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Processo");
+                });
+
             modelBuilder.Entity("SistemaAA.Domain.Entities.Processo", b =>
                 {
                     b.HasOne("SistemaAA.Domain.Entities.Usuario", "AdvogadoResponsavel")
@@ -501,6 +546,11 @@ namespace SistemaAA.Infrastructure.Migrations
                     b.Navigation("Captador");
 
                     b.Navigation("Responsavel");
+                });
+
+            modelBuilder.Entity("SistemaAA.Domain.Entities.Processo", b =>
+                {
+                    b.Navigation("Documentos");
                 });
 
             modelBuilder.Entity("SistemaAA.Domain.Entities.Usuario", b =>

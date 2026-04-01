@@ -62,5 +62,6 @@ namespace SistemaAA.Domain.Entities
         public Usuario? Captador { get; set; }
         public Usuario? Responsavel { get; set; }
         public Usuario? AdvogadoResponsavel { get; set; }
+        public ICollection<Documento> Documentos { get; set; } = new List<Documento>();
     }
 }

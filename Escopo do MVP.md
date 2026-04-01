@@ -2,8 +2,8 @@
 
 ## **O que ENTRA (Must Have)**
 
-* **Autenticação e Perfis:** Login via Supabase; Perfis de Sócio, Estagiário e Captador com restrições de ecrã (RBAC básico).  
-* **Módulo de Entrada:** Formulário de captação (novo lead) com upload de até 5 documentos (Supabase Storage).  
+* **Autenticação e Perfis:** Login; Perfis de Sócio, Estagiário e Captador com restrições de ecrã (RBAC básico).  
+* **Módulo de Entrada:** Formulário de captação (novo lead) com upload de até 5 documentos.  
 * **Módulo Operacional:** Quadro Kanban simples para gestão do fluxo da petição inicial (Mudança de status).  
 * **Módulo de Visão 360:** Ficha completa do Processo linkando Cliente, Parte Contrária e Anexos.  
 * **Motor de Comissões (V1):** Cálculo de comissões com base em regras estáticas atreladas ao perfil do Captador/Advogado, gerando um extrato de pagamentos mensais.

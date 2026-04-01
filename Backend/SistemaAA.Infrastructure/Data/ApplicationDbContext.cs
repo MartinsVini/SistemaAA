@@ -14,6 +14,7 @@ namespace SistemaAA.Infrastructure.Data
         public DbSet<ParteContraria> PartesContrarias { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Processo> Processos { get; set; }
+        public DbSet<Documento> Documentos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,6 +31,13 @@ namespace SistemaAA.Infrastructure.Data
                 .HasMany(p => p.PartesContrarias)
                 .WithMany(pc => pc.Processos)
                 .UsingEntity(j => j.ToTable("ParteContrariaProcesso"));
+
+            // 1:N Processo -> Documentos
+            modelBuilder.Entity<Documento>()
+                .HasOne(d => d.Processo)
+                .WithMany(p => p.Documentos)
+                .HasForeignKey(d => d.ProcessoId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Configurar Delete Behavior para os usuários (Evitar exclusão em cascata)
             modelBuilder.Entity<Processo>()

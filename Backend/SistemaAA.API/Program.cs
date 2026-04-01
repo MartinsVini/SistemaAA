@@ -90,27 +90,48 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    // Fix: Scalar resolving relative paths based on URL trailing slash
-    app.MapOpenApi(); // Base: /openapi/{documentName}.json
-    app.MapOpenApi("/scalar/openapi/{documentName}.json"); // Relative without trailing slash
-    app.MapOpenApi("/scalar/v1/openapi/{documentName}.json"); // Relative with trailing slash
-
-    app.MapScalarApiReference(options => {
-        options.WithTitle("API do Sistema AA")
-               .WithTheme(ScalarTheme.DeepSpace)
-               .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient)
-               .WithBundleUrl("https://cdn.jsdelivr.net/npm/@scalar/api-reference")
-               .WithOpenApiRoutePattern("/openapi/v1.json");
+    app.MapOpenApi();
+    // Usa o MapScalarApiReference para o UI do Scalar
+    app.MapScalarApiReference(options => 
+    {
+        options.WithTitle("SistemaAA API - Dev")
+               .WithTheme(ScalarTheme.Moon)
+               .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient);
+              
+        // Explicitly set the authentication required for scalar if needed
+        options.Authentication = new ScalarAuthenticationOptions
+        {
+            PreferredSecurityScheme = "Bearer"
+        };
     });
-    
-    app.MapGet("/", () => Results.Redirect("/scalar/v1")).ExcludeFromDescription();
 }
 
+app.UseHttpsRedirection();
+
+// Habilitar o CORS ANTES de Autenticação e Autorização
+app.UseCors("AllowAll"); // Usa a política permissiva configurada acima
+
+// Habilitar servir arquivos estáticos da pasta wwwroot (ou uploads se configurado manualmente)
+app.UseStaticFiles();
+
+// Middlewares cruciais para o Identity e JWT funcionarem:
 app.UseAuthentication();
 app.UseAuthorization();
 

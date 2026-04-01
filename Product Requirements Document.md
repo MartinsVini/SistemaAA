@@ -33,10 +33,10 @@ Sistema interno de gestão processual e financeira construído com base em DDD (
 * **Base de Dados:** PostgreSQL via Entity Framework Core 10\.  
 * **Performance:** Carregamento de listas com paginação no servidor e tempo de resposta de APIs abaixo de 200ms.
 
-## **6\. Integrações (Supabase)**
+## **6\. Integrações
 
-* **Auth:** Autenticação e gestão de sessões via Supabase Auth (JWT integrado ao .NET).  
-* **Storage:** Upload de PDFs e imagens iniciais para o Supabase Storage, guardando apenas a URL no PostgreSQL.
+* **Auth:** Autenticação e gestão de sessões via identity  (JWT integrado ao .NET).  
+* **Storage:** Upload de PDFs e imagens iniciais, guardando apenas a URL no PostgreSQL.
 
 ## **7\. Edge Cases (Casos Limite) e Tratamento**
 
